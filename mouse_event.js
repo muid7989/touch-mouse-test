@@ -49,11 +49,11 @@ function draw() {
 	let debugY = DEBUG_VIEW_Y;
 	text('fps:'+fps, DEBUG_VIEW_X, debugY);
 	debugY += DEBUG_VIEW_H;
-	text('touchStarted: '+countTouchStart, DEBUG_VIEW_X, debugY);
+	text('mousePressed: '+countTouchStart, DEBUG_VIEW_X, debugY);
 	debugY += DEBUG_VIEW_H;
-	text('touchEnded: '+countTouchEnd, DEBUG_VIEW_X, debugY);
+	text('mouseReleased: '+countTouchEnd, DEBUG_VIEW_X, debugY);
 	debugY += DEBUG_VIEW_H;
-	text('touchMoved: '+countTouchMove, DEBUG_VIEW_X, debugY);
+	text('mouseDragged: '+countTouchMove, DEBUG_VIEW_X, debugY);
 	debugY += DEBUG_VIEW_H;
 	text('mouseX: '+mouseX.toFixed(2)+' mouseY: '+mouseY.toFixed(2), DEBUG_VIEW_X, debugY);
 	debugY += DEBUG_VIEW_H;
@@ -63,7 +63,7 @@ function draw() {
 		text('X: '+touches[i].x.toFixed(2)+' Y: '+touches[i].y.toFixed(2), DEBUG_VIEW_X, debugY);
 	}
 }
-function touchStarted() {
+function mousePressed() {
 	countTouchStart++;
 /*
 	let tp = [];
@@ -84,10 +84,10 @@ function touchStarted() {
 	}
 */
 }
-function touchEnded() {
+function mouseReleased() {
 	countTouchEnd++;
 }
-function touchMoved() {
+function mouseDragged() {
 	countTouchMove++;
 /*
 	let tp = [];
