@@ -55,6 +55,8 @@ function draw() {
 	debugY += DEBUG_VIEW_H;
 	text('mouseDragged: '+countTouchMove, DEBUG_VIEW_X, debugY);
 	debugY += DEBUG_VIEW_H;
+	text('mouseIsPressed: '+mouseIsPressed, DEBUG_VIEW_X, debugY);
+	debugY += DEBUG_VIEW_H;
 	text('mouseX: '+mouseX.toFixed(2)+' mouseY: '+mouseY.toFixed(2), DEBUG_VIEW_X, debugY);
 	debugY += DEBUG_VIEW_H;
 	text('touch num: '+touches.length, DEBUG_VIEW_X, debugY);
